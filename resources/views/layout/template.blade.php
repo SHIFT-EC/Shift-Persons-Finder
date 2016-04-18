@@ -8,10 +8,30 @@
     <meta name="author" content="Shift">
     <link rel="shortcut icon" href="favicon.ico">
 
-    {{-- CSS Main --}}
+    {{-- CSS--}}
     <link rel="stylesheet" href="{{ asset('css/app.min.css') }}">
+
+    {{-- FONTS --}}
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,400italic,600italic' rel='stylesheet' type='text/css'>
 </head>
 <body>
+
+    {{-- =======================
+         HEADER
+         ======================= --}}
+
+    <header>
+        <!-- Stack the columns on mobile by making one full-width and the other half-width -->
+        <div class="row">
+            <div class="col-xs-12 col-md-12 col-sm-12">
+                <div class="header">
+                    <img src="/images/logo_ecu_911.png" alt="Logo 911">
+                    <a href="#">Home</a>
+                    <img src="/images/logo_skype.png" alt="Skyoe">
+                </div>
+            </div>
+        </div>
+    </header>
 
     {{-- =======================
          START CONTENT
