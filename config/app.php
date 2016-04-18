@@ -52,7 +52,7 @@ return [
     |
     */
 
-    'timezone' => 'UTC',
+    'timezone' => 'America/Guayaquil',
 
     /*
     |--------------------------------------------------------------------------
@@ -65,7 +65,7 @@ return [
     |
     */
 
-    'locale' => 'en',
+    'locale' => 'es',
 
     /*
     |--------------------------------------------------------------------------
@@ -151,11 +151,15 @@ return [
         /*
          * Application Service Providers...
          */
-        App\Providers\AppServiceProvider::class,
-        App\Providers\AuthServiceProvider::class,
-        App\Providers\EventServiceProvider::class,
-        App\Providers\RouteServiceProvider::class,
+        Spf\Providers\AppServiceProvider::class,
+        Spf\Providers\AuthServiceProvider::class,
+        Spf\Providers\EventServiceProvider::class,
+        Spf\Providers\RouteServiceProvider::class,
 
+        /**
+         * Externals
+         */
+        Laracasts\Flash\FlashServiceProvider::class,
     ],
 
     /*
@@ -201,6 +205,11 @@ return [
         'URL' => Illuminate\Support\Facades\URL::class,
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
+
+        /**
+         * Externals
+         */
+        'Flash'     => Laracasts\Flash\Flash::class,
 
     ],
 
