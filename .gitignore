@@ -16,3 +16,10 @@ storage/
 .env.php
 .env
 .env.example
+
+#archivos phpstorm
+.idea/workspace.xml
+#archivos prepros
+*.cfg
+#uploads
+public/uploads

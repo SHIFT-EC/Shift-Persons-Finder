@@ -1,0 +1,28 @@
+
+/*===============================================*\
+    $STYLE
+\*===============================================*/
+
+/*
+ Aquí incluímos todos los módulos (archivos .scss) que se van
+ a compilar en el CSS definitivo: /css/style.css.
+*/
+
+//librerias
+@import "lib/settings";
+@import "lib/mixins";
+@import "lib/placeholders";
+
+//base del sitio web
+@import "base/bootstrap";//6.1
+@import "base/sitio";
+
+//modulos
+@import "abstractions/buttons";
+@import "abstractions/pagination";
+
+
+//theme
+@import "theme/header";
+@import "theme/footer";
+
