@@ -8,7 +8,7 @@
 
 // $variables generales de colores
 
-$base-color:   #1468a4;
+$base-color:   #0078D7;
 $second-color: #333333;
 $celeste:     #15BAB4;
 
@@ -31,6 +31,11 @@ $title-color:     #6e6e6e;
 $link-color:      skyblue;
 $link-color-hover: #1AB0FF;
 
+//breakpoints
+$mobile:28.75em;//460px
+$tablet:48em;//768px
+$desktop:62.5em;//1000px
+$full-hd:75em;//1200pc
 
 
 // $Fuente
@@ -39,7 +44,7 @@ $font-family:   'Open Sans', sans-serif !important;
 
 
 // $ancho maximo
-$max-width:      62.5rem;
+$max-width:      75rem; //12000px
 
 //Links
 
