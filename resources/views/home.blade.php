@@ -37,199 +37,41 @@
             {!! Form::close() !!}
 
             <div class="container-persons">
-                <div class="person">
-                    <img class="person__photo" src="http://lorempixel.com/150/150/people/1" alt="">
-                    <ul class="person__data">
-                        <li>Nombre: Edwin</li>
-                        <li>Apellido:Gustavo</li>
-                        <li>Edad: 28</li>
-                        <li>Ciudad: Quito</li>
-                        <li>Estado: <span class="label label-danger">Desaparecido</span></li>
-                    </ul>
-                    <a href="#" class="btn btn-primary person__button">
-                        <i class="glyphicon glyphicon-eye-open"></i> Ver
-                    </a>
-                </div>
-
-                <div class="person">
-                    <img class="person__photo" src="http://lorempixel.com/150/150/people/1" alt="">
-                    <ul class="person__data">
-                        <li>Nombre: Edwin</li>
-                        <li>Apellido:Gustavo</li>
-                        <li>Edad: 28</li>
-                        <li>Ciudad: Quito</li>
-                        <li>Estado: <span class="label label-danger">Desaparecido</span></li>
-                    </ul>
-                    <a href="#" class="btn btn-primary person__button">
-                        <i class="glyphicon glyphicon-eye-open"></i> Ver
-                    </a>
-                </div>
-                <div class="person">
-                    <img class="person__photo" src="http://lorempixel.com/150/150/people/2" alt="">
-                    <ul class="person__data">
-                        <li>Nombre: Edwin</li>
-                        <li>Apellido:Gustavo</li>
-                        <li>Edad: 28</li>
-                        <li>Ciudad: Quito</li>
-                        <li>Estado: <span class="label label-danger">Desaparecido</span></li>
-                    </ul>
-                    <a href="#" class="btn btn-primary person__button">
-                        <i class="glyphicon glyphicon-eye-open"></i> Ver
-                    </a>
-                </div>
-                <div class="person">
-                    <img class="person__photo" src="http://lorempixel.com/150/150/people/3" alt="">
-                    <ul class="person__data">
-                        <li>Nombre: Edwin</li>
-                        <li>Apellido:Gustavo</li>
-                        <li>Edad: 28</li>
-                        <li>Ciudad: Quito</li>
-                        <li>Estado: <span class="label label-danger">Desaparecido</span></li>
-                    </ul>
-                    <a href="#" class="btn btn-primary person__button">
-                        <i class="glyphicon glyphicon-eye-open"></i> Ver
-                    </a>
-                </div>
-                <div class="person">
-                    <img class="person__photo" src="http://lorempixel.com/150/150/people/4" alt="">
-                    <ul class="person__data">
-                        <li>Nombre: Edwin</li>
-                        <li>Apellido:Gustavo</li>
-                        <li>Edad: 28</li>
-                        <li>Ciudad: Quito</li>
-                        <li>Estado: <span class="label label-danger">Desaparecido</span></li>
-                    </ul>
-                    <a href="#" class="btn btn-primary person__button">
-                        <i class="glyphicon glyphicon-eye-open"></i> Ver
-                    </a>
-                </div>
-                <div class="person">
-                    <img class="person__photo" src="http://lorempixel.com/150/150/people/5" alt="">
-                    <ul class="person__data">
-                        <li>Nombre: Edwin</li>
-                        <li>Apellido:Gustavo</li>
-                        <li>Edad: 28</li>
-                        <li>Ciudad: Quito</li>
-                        <li>Estado: <span class="label label-danger">Desaparecido</span></li>
-                    </ul>
-                    <a href="#" class="btn btn-primary person__button">
-                        <i class="glyphicon glyphicon-eye-open"></i> Ver
-                    </a>
-                </div>
-                <div class="person">
-                    <img class="person__photo" src="http://lorempixel.com/150/150/people/6" alt="">
-                    <ul class="person__data">
-                        <li>Nombre: Edwin</li>
-                        <li>Apellido:Gustavo</li>
-                        <li>Edad: 28</li>
-                        <li>Ciudad: Quito</li>
-                        <li>Estado: <span class="label label-danger">Desaparecido</span></li>
-                    </ul>
-                    <a href="#" class="btn btn-primary person__button">
-                        <i class="glyphicon glyphicon-eye-open"></i> Ver
-                    </a>
-                </div>
-                <div class="person">
-                    <img class="person__photo" src="http://lorempixel.com/150/150/people/7" alt="">
-                    <ul class="person__data">
-                        <li>Nombre: Edwin</li>
-                        <li>Apellido:Gustavo</li>
-                        <li>Edad: 28</li>
-                        <li>Ciudad: Quito</li>
-                        <li>Estado: <span class="label label-danger">Desaparecido</span></li>
-                    </ul>
-                    <a href="#" class="btn btn-primary person__button">
-                        <i class="glyphicon glyphicon-eye-open"></i> Ver
-                    </a>
-                </div>
-                <div class="person">
-                    <img class="person__photo" src="http://lorempixel.com/150/150/people/8" alt="">
-                    <ul class="person__data">
-                        <li>Nombre: Edwin</li>
-                        <li>Apellido:Gustavo</li>
-                        <li>Edad: 28</li>
-                        <li>Ciudad: Quito</li>
-                        <li>Estado: <span class="label label-danger">Desaparecido</span></li>
-                    </ul>
-                    <a href="#" class="btn btn-primary person__button">
-                        <i class="glyphicon glyphicon-eye-open"></i> Ver
-                    </a>
-                </div>
-                <div class="person">
-                    <img class="person__photo" src="http://lorempixel.com/150/150/people/9" alt="">
-                    <ul class="person__data">
-                        <li>Nombre: Edwin</li>
-                        <li>Apellido:Gustavo</li>
-                        <li>Edad: 28</li>
-                        <li>Ciudad: Quito</li>
-                        <li>Estado: <span class="label label-danger">Desaparecido</span></li>
-                    </ul>
-                    <a href="#" class="btn btn-primary person__button">
-                        <i class="glyphicon glyphicon-eye-open"></i> Ver
-                    </a>
-                </div>
-                <div class="person">
-                    <img class="person__photo" src="http://lorempixel.com/150/150/people/1" alt="">
-                    <ul class="person__data">
-                        <li>Nombre: Edwin</li>
-                        <li>Apellido:Gustavo</li>
-                        <li>Edad: 28</li>
-                        <li>Ciudad: Quito</li>
-                        <li>Estado: <span class="label label-danger">Desaparecido</span></li>
-                    </ul>
-                    <a href="#" class="btn btn-primary person__button">
-                        <i class="glyphicon glyphicon-eye-open"></i> Ver
-                    </a>
-                </div>
-                <div class="person">
-                    <img class="person__photo" src="http://lorempixel.com/150/150/people/2" alt="">
-                    <ul class="person__data">
-                        <li>Nombre: Edwin</li>
-                        <li>Apellido:Gustavo</li>
-                        <li>Edad: 28</li>
-                        <li>Ciudad: Quito</li>
-                        <li>Estado: <span class="label label-danger">Desaparecido</span></li>
-                    </ul>
-                    <a href="#" class="btn btn-primary person__button">
-                        <i class="glyphicon glyphicon-eye-open"></i> Ver
-                    </a>
-                </div>
-                <div class="person">
-                    <img class="person__photo" src="http://lorempixel.com/150/150/people/4" alt="">
-                    <ul class="person__data">
-                        <li>Nombre: Edwin</li>
-                        <li>Apellido:Gustavo</li>
-                        <li>Edad: 28</li>
-                        <li>Ciudad: Quito</li>
-                        <li>Estado: <span class="label label-danger">Desaparecido</span></li>
-                    </ul>
-                    <a href="#" class="btn btn-primary person__button">
-                        <i class="glyphicon glyphicon-eye-open"></i> Ver
-                    </a>
-                </div>
+                @foreach( $users as $user)
+                    <div class="person">
+                        <img class="person__photo" src="{{$user->photo}}" alt="{{$user->name}}">
+                        <ul class="person__data">
+                            <li>Nombre: {{$user->first_name}}</li>
+                            <li>Apellido: {{$user->last_name}}</li>
+                            <li>Edad: {{$user->age}}</li>
+                            <li>Ciudad: {{$user->city}}</li>
+                            <li>Estado:
+                                @if($user->status == 'vivo')
+                                    <span class="label label-success">
+                                        {{$user->status}}
+                                    </span>
+                                @elseif($user->status == 'desaparecido')
+                                    <span class="label label-warning">
+                                        {{$user->status}}
+                                    </span>
+                                @else
+                                    <span class="label label-danger">
+                                    {{$user->status}}
+                                </span>
+                                @endif
+                            </li>
+                        </ul>
+                        <a href="#" class="btn btn-primary person__button">
+                            <i class="glyphicon glyphicon-eye-open"></i> Ver
+                        </a>
+                    </div>
+                @endforeach
 
             </div>{{--FIN CONTAINER PERSON--}}
 
             {{--PAGINATE---}}
-            <nav>
-                <ul class="pagination">
-                    <li>
-                        <a href="#" aria-label="Previous">
-                            <span aria-hidden="true">&laquo;</span>
-                        </a>
-                    </li>
-                    <li><a href="#">1</a></li>
-                    <li><a href="#">2</a></li>
-                    <li><a href="#">3</a></li>
-                    <li><a href="#">4</a></li>
-                    <li><a href="#">5</a></li>
-                    <li>
-                        <a href="#" aria-label="Next">
-                            <span aria-hidden="true">&raquo;</span>
-                        </a>
-                    </li>
-                </ul>
-            </nav>
+            {!! $users->render() !!}
+
         </div>{{--FIN COLUMNS--}}
     </div>{{--FIN ROW--}}
 @endsection

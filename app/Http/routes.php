@@ -13,9 +13,7 @@
 
 Route::get('/', [
     'as' => 'home',
-    function () {
-        return view('home');
-    }
+    'uses' => 'HomeController@index'
 ]);
 
 /**
