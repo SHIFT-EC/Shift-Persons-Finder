@@ -1,0 +1,42 @@
+
+
+/*===============================================*\
+    BANNER
+\*===============================================*/
+
+.banner{
+  background:url("../images/banner_background.jpg");
+  background-size:cover;
+  color: $white;
+
+  .form{
+    max-width: $max-width;
+    overflow: hidden;
+    padding:12rem 0;
+    width: 95%;
+    margin: auto;
+    text-align: center;
+
+    @media screen and (min-width: $desktop){
+      padding:14rem 0;
+    }//FIN MEDIA QUERY
+
+    .input-group-addon{
+      background-color: $success;
+      color: $white;
+    }
+
+    &__title{
+      font-style: italic;
+      color: $white;
+      font-weight:bold;
+    }
+
+    .input-group{
+      text-align: center;
+      max-width: 300px;
+      margin: auto;
+    }
+
+  }//FIN FORM
+}// FIN BANNER

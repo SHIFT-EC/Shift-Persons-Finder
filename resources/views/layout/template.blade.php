@@ -40,6 +40,15 @@
         </div>
     </header> <!--./ FIN HEADER-->
 
+
+    @if(Route::is('home'))
+        {{--INICIO BANNER--}}
+        @include('partials/banner')
+
+        {{--INICIO BANNER DONATION--}}
+        @include('partials/banner-donation')
+    @endif
+
     {{-- =======================
          START CONTENT
          ======================= --}}

@@ -13,6 +13,7 @@
 @import "lib/mixins";
 @import "lib/placeholders";
 
+
 //modulos
 @import "abstractions/buttons";
 @import "abstractions/pagination";
@@ -21,8 +22,12 @@
 @import "base/bootstrap";//6.1
 @import "base/sitio";
 
+//elements
+@import "elements/forms";
+
 //theme
 @import "theme/header";
+@import "theme/banner";
 @import "theme/footer";
 @import "theme/form-app";
 

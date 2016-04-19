@@ -11,9 +11,12 @@
 |
 */
 
-Route::get('/', function () {
-    return view('home');
-});
+Route::get('/', [
+    'as' => 'home',
+    function () {
+        return view('home');
+    }
+]);
 
 /**
  * Add register

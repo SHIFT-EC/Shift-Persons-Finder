@@ -59,7 +59,6 @@ article{
 	text-align: left;
 }
 
-
 img{
 	max-width: 100%;
 	height: auto;
@@ -79,4 +78,8 @@ li.current-menu-item,.page_item{
 
 .bg-basecolor{
 	background-color:$base-color;
+}
+
+.container-fluid{
+	padding:0;
 }
