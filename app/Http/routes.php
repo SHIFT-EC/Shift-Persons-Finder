@@ -22,3 +22,7 @@ Route::get('crear', [
     'as' => 'create-missing',
     'uses' => 'MissingController@create',
 ]);
+Route::post('crear', [
+    'as' => 'create-missing.store',
+    'uses' => 'MissingController@store',
+]);
