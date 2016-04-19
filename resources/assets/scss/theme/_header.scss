@@ -44,6 +44,11 @@ header{
       padding-top:.5rem;
       font-style: italic;
    }//FIN SKYPE
-
+   @media screen and (max-width: $mobile){
+      img {
+         margin-top: 0.5rem;
+         margin-bottom: 0.5rem;
+      }
+   }
 
 }//FIN HEADER
