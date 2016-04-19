@@ -3,33 +3,34 @@
 
 @section('content')
     <div class="row">
-        <div class="col-sm-12">
+        <div class="col-sm-12 form__content">
             <h2 class="text-left">Identifica a la persona desaparecida</h2>
             {{ Form::open(['route' => 'create-missing.store', 'method' => 'POST', 'files' => true, 'class' => 'text-left']) }}
                 <div class="row">
+                    <div class="col-sm-12"><h3>Datos Básicos:</h3></div>
                     <div class="col-sm-12 col-md-6">
                         <div class="form-group">
-                            <label for="first_name">Nombre</label>
-                            <input type="text" class="form-control" id="first_name">
+                            <label for="first_name">Nombre <span class="span__required">*</span></label>
+                            <input type="text" class="form-control" name="first_name" id="first_name" required>
                         </div>
                     </div>
                     <div class="col-sm-12 col-md-6">
                         <div class="form-group">
-                            <label for="last_name">Apellido</label>
-                            <input type="text" class="form-control" id="last_name">
+                            <label for="last_name">Apellido <span class="span__required">*</span></label>
+                            <input type="text" class="form-control" name="last_name" id="last_name" required>
                         </div>
                     </div>
                     <div class="col-sm-12 col-md-6">
                         <div class="form-group">
-                            <label for="age">Edad</label>
-                            <input type="text" class="form-control" name="age" id="age">
+                            <label for="age">Edad <span class="span__required">*</span></label>
+                            <input type="text" class="form-control" name="age" id="age" required>
                         </div>
                     </div>
                     <div class="col-sm-12 col-md-6">
                         <div class="form-group">
-                            <label for="gender">Género</label>
-                            <select class="form-control" name="gender" id="gender">
-                                <option>-- Seleccione --</option>
+                            <label for="gender">Género <span class="span__required">*</span></label>
+                            <select class="form-control" name="gender" id="gender" required>
+                                <option value="">-- Seleccione --</option>
                                 <option value="Mesculino">Masculino</option>
                                 <option value="Femenino">Femenino</option>
                             </select>
@@ -37,13 +38,71 @@
                     </div>
                     <div class="col-sm-12 col-md-6">
                         <div class="form-group">
-                            <label for="exampleInputFile">Género</label>
-                            <input type="file" id="exampleInputFile">
-                            <p class="help-block">Example block-level help text here.</p>
+                            <label for="address">Ciudad Origen <span class="span__required">*</span></label>
+                            <input type="text" class="form-control" name="address" id="address" placeholder="Ej: Pedernales" required>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-md-6">
+                        <div class="form-group">
+                            <label for="last_location">Útimo lugar conocido <span class="span__required">*</span></label>
+                            <input type="text" class="form-control" name="last_location" id="last_location" placeholder="Ej: Portoviejo" required>
                         </div>
                     </div>
                 </div>
-                <button type="submit" class="btn btn-default">Crear Registro</button>
+                <hr>
+                <div class="row">
+                    <div class="col-sm-12 col-md-6">
+                        <div class="form-group">
+                            <label for="photo">Foto <span class="span__required">*</span></label>
+                            <input type="file" id="photo" name="photo" required>
+                            <p class="help-block">Proporciona únicamente fotos jpg o png.</p>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-md-6">
+                        <div class="form-group">
+                            <label for="description">Descripción <span class="span__required">*</span></label>
+                            <textarea id="description" class="form-control" name="description" rows="5" required></textarea>
+                        </div>
+                    </div>
+                </div>
+                <hr>
+                <div class="row">
+                    <div class="col-sm-12"><h3>Datos del creador del registro:</h3></div>
+                    <div class="col-sm-12 col-md-6">
+                        <div class="form-group">
+                            <label for="name">Tu nombre <span class="span__required">*</span></label>
+                            <input type="text" class="form-control" name="name" id="name" required>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-md-6">
+                        <div class="form-group">
+                            <label for="last_nameR">Tu apellido <span class="span__required">*</span></label>
+                            <input type="text" class="form-control" name="last_nameR" id="last_nameR" required>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-md-6">
+                        <div class="form-group">
+                            <label for="email">Tu email <span class="span__required">*</span></label>
+                            <input type="text" class="form-control" name="email" id="email" required>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-md-6">
+                        <div class="form-group">
+                            <label for="phone">Tu teléfono <span class="span__required">*</span></label>
+                            <input type="text" class="form-control" name="phone" id="phone" required>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-md-6">
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox" name="policy"> Acepto la política
+                            </label>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 text-center">
+                        <button type="submit" class="btn btn-primary">Crear Registro</button>
+                    </div>
+                </div>
             {{ Form::close() }}
         </div>
     </div>

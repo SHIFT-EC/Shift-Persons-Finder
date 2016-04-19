@@ -23,3 +23,7 @@ storage/
 *.cfg
 #uploads
 public/uploads
+
+#Temp
+public/css/
+.DS_Store
