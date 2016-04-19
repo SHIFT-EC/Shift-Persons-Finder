@@ -19,19 +19,26 @@
     {{-- =======================
          HEADER
          ======================= --}}
-
     <header>
-        <!-- Stack the columns on mobile by making one full-width and the other half-width -->
-        <div class="row">
-            <div class="col-xs-12 col-md-12 col-sm-12">
-                <div class="header">
-                    <img src="/images/logo_ecu_911.png" alt="Logo 911">
-                    <a href="#">Home</a>
-                    <img src="/images/logo_skype.png" alt="Skyoe">
-                </div>
+
+        <div class="header">
+
+            <a class=header__ecu href="http://www.ecu911.gob.ec/">
+                <img src="/images/logo_ecu_911.png" alt="Logo 911">
+            </a>
+
+            {{--<a class="header__home" href="#"><i class="glyphicon glyphicon-home"></i> Inicio</a>--}}
+
+            <div class="header__skype">
+                <a href="http://sk.ype.ms/8Ecn5H">
+                    <img src="/images/logo_skype.png" alt="Skype">
+                </a>
+                <p>
+                    Llamadas a skype gratis
+                </p>
             </div>
         </div>
-    </header>
+    </header> <!--./ FIN HEADER-->
 
     {{-- =======================
          START CONTENT
@@ -40,6 +47,14 @@
         {{-- App Content --}}
         @yield('content')
     </div>
+    
+    <footer>
+        <div class="footer">
+            <a target="_blank" href="http://shiftlatam.com">
+                <img src="/images/logo_shift.png" alt="Logo Shiftlatam">
+            </a>
+        </div>
+    </footer>
 
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>

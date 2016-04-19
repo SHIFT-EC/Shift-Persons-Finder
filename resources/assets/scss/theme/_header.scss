@@ -1,9 +1,49 @@
 
 header{
-   
+   background: $second-color;
+   color: $white;
+   text-align:center;
 }
 
 .header{
-   max-width: 1200px;
+   max-width: $max-width;
    margin: auto;
+   padding:1rem;
+
+   @media screen and (min-width: $tablet){
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+   }//FIN MEDIAQUERY
+
+   a{
+      display: block;
+      text-align: center;
+   }
+
+   p{
+      margin: 0;
+   }
+
+   img{
+      max-width: 40%;
+      @media screen and (min-width: $tablet){
+         max-width: 85%;
+      }//FIN MEDIAQUERY
+   }//FIN IMG
+
+   &__ecu{
+
+   }//FIN ECU911
+
+   &__home{
+      color: $white;
+   } //FIN HOME
+
+   &__skype{
+      padding-top:.5rem;
+      font-style: italic;
+   }//FIN SKYPE
+
+
 }//FIN HEADER
