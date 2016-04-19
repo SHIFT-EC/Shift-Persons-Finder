@@ -46,7 +46,7 @@
                     <p>Registro creado por: <b>{{ $missing->user->name }}</b></p>
                 </div>
                 <div class="col-sm-12 col-md-3">
-                    <p>Teléfono: <a href="tel:{{$missing->user->phone}}"> <span class="label label-success">{{ $missing->user->phone }}</span></a></p>
+                    <p>Teléfono: <a href="skype:{{$missing->user->phone}}?call"> <span class="label label-success">{{ $missing->user->phone }}</span></a></p>
                 </div>
                 <div class="col-sm-12 col-md-3 col-md-offset-3">
                     <p>Mail: <a href="mailto:{{$missing->user->email}}"> <span class="label label-success">{{ $missing->user->email }}</span></a></p>
