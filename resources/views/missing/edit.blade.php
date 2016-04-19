@@ -26,6 +26,8 @@
                     <h5>Descripción</h5>
                     <p>{{ $missing->description }}</p>
                     <p>Registro creado por <b>{{ $missing->user->name }}</b></p>
+                    <p>Teléfono <a href="tel:{{$missing->user->phone}}"> <span class="label label-success">{{ $missing->user->phone }}</span></a></p>
+                    <p>Mail <a href="mailto:{{$missing->user->email}}"> <span class="label label-success">{{ $missing->user->email }}</span></a></p>
                     <p>Estatus actual:
                         @if($missing->status == 'desaparecido')
                             <span class="label label-warning">{{ $missing->status }}</span>
@@ -67,32 +69,32 @@
             </div>
             <hr>
             <div class="row">
-                <div class="col-sm-12 col-md-6 col-md-offset-3"><h3>Datos del creador del registro:</h3></div>
+                <div class="col-sm-12 col-md-6 col-md-offset-3"><h3>Tienes información? escribenos a través de los comentario y ponte en contacto con la persona que busca información:</h3></div>
                 <div class="col-sm-12 col-md-6 col-md-offset-3">
-                    <div class="form-group">
-                        <label for="name">Tu nombre <span class="span__required">*</span></label>
-                        <input type="text" class="form-control" name="name" id="name" value="{{ old('name') }}" required>
-                    </div>
+                    <div id="disqus_thread"></div>
+                    <script>
+                        /**
+                         * RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+                         * LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
+                         */
+                        /*
+                         var disqus_config = function () {
+                         this.page.url = PAGE_URL; // Replace PAGE_URL with your page's canonical URL variable
+                         this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+                         };
+                         */
+                        (function() { // DON'T EDIT BELOW THIS LINE
+                            var d = document, s = d.createElement('script');
+
+                            s.src = '//emergenciaecuador.disqus.com/embed.js';
+
+                            s.setAttribute('data-timestamp', +new Date());
+                            (d.head || d.body).appendChild(s);
+                        })();
+                    </script>
+                    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
                 </div>
-                <div class="col-sm-12 col-md-6 col-md-offset-3">
-                    <div class="form-group">
-                        <label for="last_nameR">Tu apellido <span class="span__required">*</span></label>
-                        <input type="text" class="form-control" name="last_nameR" value="{{ old('last_nameR') }}" id="last_nameR" required>
-                    </div>
-                </div>
-                <div class="col-sm-12 col-md-6 col-md-offset-3">
-                    <div class="form-group">
-                        <label for="email">Tu email <span class="span__required">*</span></label>
-                        <input type="text" class="form-control" name="email" value="{{ old('email') }}" id="email" required>
-                    </div>
-                </div>
-                <div class="col-sm-12 col-md-6 col-md-offset-3">
-                    <div class="form-group">
-                        <label for="phone">Tu teléfono <span class="span__required">*</span></label>
-                        <input type="text" class="form-control" name="phone" value="{{ old('phone') }}" id="phone" required>
-                    </div>
-                </div>
-                <div class="col-sm-12 col-md-6 col-md-offset-3 text-center" style="margin-bottom: 0.8rem">
+                <div class="col-sm-12 col-md-6 col-md-offset-3 text-center" style="margin-bottom: 0.8rem; margin-top: 0.8rem">
                     <span class="label label-warning">Al enviar este formulario aceptas que estás proporcionando información real</span>
                 </div>
                 <div class="col-sm-12 text-center">
@@ -105,5 +107,5 @@
 @endsection
 
 @section('scripts')
-
+    <script id="dsq-count-scr" src="//emergenciaecuador.disqus.com/count.js" async></script>
 @endsection
