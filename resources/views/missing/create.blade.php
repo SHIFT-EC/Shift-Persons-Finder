@@ -98,7 +98,7 @@
                             <input type="text" class="form-control" name="phone" value="{{ old('phone') }}" id="phone" required>
                         </div>
                     </div>
-                    <div class="col-sm-12 col-md-6" style="margin-bottom: 0.8rem">
+                    <div class="col-sm-12 text-center" style="margin-bottom: 0.8rem">
                         <span class="label label-warning">Al enviar este formulario aceptas que estás proporcionando información real</span>
                     </div>
                     <div class="col-sm-12 text-center">
