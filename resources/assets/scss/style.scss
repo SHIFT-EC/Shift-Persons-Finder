@@ -17,6 +17,9 @@
 @import "base/bootstrap";//6.1
 @import "base/sitio";
 
+//elements
+@import "elements/forms";
+
 //modulos
 @import "abstractions/buttons";
 @import "abstractions/pagination";
@@ -24,5 +27,6 @@
 
 //theme
 @import "theme/header";
+@import "theme/banner";
 @import "theme/footer";
 
