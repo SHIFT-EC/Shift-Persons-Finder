@@ -8,7 +8,7 @@
         <div class="col-sm-12">
 
             {!! Form::open([''=>'','method'=>'post', 'class'=> 'form-inline text-right filter-persons']) !!}
-                <div class="form-group">
+                <!--<div class="form-group">
                     <select class="form-control" name="status" id="">
                         <option value="">Estado</option>
                         <option value="">Estado uno</option>
@@ -32,7 +32,7 @@
                         <option value="">Masculino</option>
                         <option value="">Femenino</option>
                     </select>
-                </div>
+                </div>-->
 
             {!! Form::close() !!}
 
