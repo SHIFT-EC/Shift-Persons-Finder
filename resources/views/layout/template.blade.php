@@ -44,9 +44,6 @@
     @if(Route::is('home'))
         {{--INICIO BANNER--}}
         @include('partials/banner')
-
-        {{--INICIO BANNER DONATION--}}
-        @include('partials/banner-donation')
     @endif
 
     {{-- =======================
@@ -56,6 +53,11 @@
         {{-- App Content --}}
         @yield('content')
     </div>
+
+    @if(Route::is('home'))
+        {{--INICIO BANNER DONATION--}}
+        @include('partials/banner-donation')
+    @endif
     
     <footer>
         <div class="footer">

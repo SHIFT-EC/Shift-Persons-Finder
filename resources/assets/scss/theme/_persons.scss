@@ -1,0 +1,62 @@
+
+
+/*===============================================================
+	PERSONS
+=================================================================*/
+
+.title-persons{
+  padding-bottom:.5rem;
+  font-size:2rem;
+  margin-bottom:2rem;
+  text-transform: uppercase;
+  font-weight:500;
+}//FIN PERSONS
+
+.filter-persons{
+  border-bottom:1px solid $gray;
+  padding-bottom:1rem;
+}
+
+.container-persons{
+  margin-bottom:2rem;
+
+  @media screen and(min-width: $tablet){
+    display: flex;
+    justify-content:space-between;
+    flex-wrap: wrap;
+
+  }//FIN MEDIAQUERY
+
+
+  .person{
+    background: #f7f7f7;
+    padding:1.5rem;
+    border-bottom:3px solid $gray;
+    margin-top:1.25rem;
+
+    @media screen and(min-width: $tablet){
+      width:31.33%;
+    } //FIN MEDIAQUERY
+
+    @media screen and(min-width: $desktop){
+      width:23%;
+    }
+
+
+      &__photo{
+        border-radius: $radius;
+        margin-bottom:1rem;
+      }
+
+      &__data{
+        margin-bottom:.75rem;
+      }
+
+      &__button{
+
+        margin-top:.75rem;
+        margin-bottom:.75rem;
+      }
+
+  }//ITEMS PERSONS
+}//FIN CONTAINER-PERSON

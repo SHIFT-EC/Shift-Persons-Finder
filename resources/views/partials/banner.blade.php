@@ -10,6 +10,6 @@
         </div>
     </div>
     <p>ó</p>
-    <a href="#" class="btn btn-success"><i class="glyphicon glyphicon-user"></i> Registrar desaparecido</a>
+    <a href="{{route('create-missing')}}" class="btn btn-success"><i class="glyphicon glyphicon-user"></i> Registrar desaparecido</a>
     {!! Form::close() !!}
 </div>
