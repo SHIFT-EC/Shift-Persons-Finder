@@ -25,7 +25,7 @@ class MissingController extends Controller
      */
     public function create()
     {
-        //
+        return view('missing.create');
     }
 
     /**

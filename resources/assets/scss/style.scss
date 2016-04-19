@@ -13,17 +13,17 @@
 @import "lib/mixins";
 @import "lib/placeholders";
 
+
+//modulos
+@import "abstractions/buttons";
+@import "abstractions/pagination";
+
 //base del sitio web
 @import "base/bootstrap";//6.1
 @import "base/sitio";
 
 //elements
 @import "elements/forms";
-
-//modulos
-@import "abstractions/buttons";
-@import "abstractions/pagination";
-
 
 //theme
 @import "theme/header";

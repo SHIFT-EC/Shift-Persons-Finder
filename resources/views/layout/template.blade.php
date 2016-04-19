@@ -52,7 +52,7 @@
     {{-- =======================
          START CONTENT
          ======================= --}}
-    <div class="container-fluid">
+    <div class="container">
         {{-- App Content --}}
         @yield('content')
     </div>
