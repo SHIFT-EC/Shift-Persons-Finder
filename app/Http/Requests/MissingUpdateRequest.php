@@ -2,7 +2,7 @@
 
 namespace Spf\Http\Requests;
 
-class MissingCreateRequest extends Request
+class MissingUpdateRequest extends Request
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -22,14 +22,10 @@ class MissingCreateRequest extends Request
     public function rules()
     {
         return [
-            'first_name'    => 'required',
-            'last_name'     => 'required',
-            'age'           => 'required|numeric',
-            'gender'        => 'required',
             'photo'         => 'image',
-            'address'       => 'required',
             'last_location' => 'required',
-            'description'   => 'required',
+            'message_user'  => 'required',
+            'status'        => 'required',
             'name'          => 'required',
             'last_nameR'    => 'required',
             'email'         => 'required|email',
@@ -43,15 +39,10 @@ class MissingCreateRequest extends Request
     public function messages()
     {
         return [
-            'first_name.required'    => 'Ingresa el nombre de la persona desaparecida',
-            'last_name.required'     => 'Ingresa el apellido de la persona desaparecida',
-            'age.required'           => 'Ingresa la edad aproximada de la persona desaparecida',
-            'age.numeric'            => 'Ingresa la edad únicamente en números',
-            'gender.required'        => 'Selecciona el género de la persona desaparecida',
             'photo.image'            => 'La foto debe ser únicamente .jpg o .png',
-            'address.required'       => 'Ingresa la ciudad de la persona desaparecida',
             'last_location.required' => 'Ingresa la última ubicación conocida',
-            'description.required'   => 'Ingresa una descripción acerca de la persona desaparecida',
+            'message_user.required'  => 'Ingresa una descripción acerca de la persona desaparecida',
+            'status.required'        => 'Selecciona un status de la persona',
             'name.required'          => 'Ingresa tu nombre',
             'last_nameR.required'    => 'Ingresa tu apellido',
             'email.required'         => 'Ingresa un email para poder contactarte',

@@ -9,8 +9,9 @@
                 <div class="input-group-addon"><i class="glyphicon glyphicon-search"></i></div>
             </div>
         </div>
-        <p>ó</p>
-        <a href="{{route('create-missing')}}" class="btn btn-success"><i class="glyphicon glyphicon-user"></i> Registrar desaparecido</a>
+    </div>
+    <p>ó</p>
+    <a href="{{route('missing.create')}}" class="btn btn-success"><i class="glyphicon glyphicon-user"></i> Registrar desaparecido</a>
     {!! Form::close() !!}
 </div>
 

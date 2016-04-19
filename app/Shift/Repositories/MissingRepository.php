@@ -28,25 +28,86 @@ class MissingRepository extends BaseRepo
     {
         $missing = new Missing();
 
-        $photo = $request->photo;
-        $extension = $photo->getClientOriginalExtension();
-        $fileName = time() . '-'. rand(100, 10000) .'.'.$extension;
-        Storage::disk('public')->put('/uploads/' . $fileName, File::get($photo));
+        $fileName = $this->setNamePhoto($request->photo);
 
         $missing->fill($request->all());
-        $missing->status = 'Desaparecido';
-        $missing->photo = $fileName;
+        $missing->status = 'desaparecido';
+        $missing->photo  = $fileName;
 
-        $user = new User();
-        $user->name = $request->name;
+        $user            = new User();
+        $user->name      = $request->name;
         $user->last_name = $request->last_nameR;
-        $user->email = $request->email;
-        $user->phone = $request->phone;
-        $user->policy = $request->policy ? 1 : 0;
+        $user->email     = $request->email;
+        $user->phone     = $request->phone;
+        $user->policy    = $request->policy === "true" ? 1 : 0;
 
         $user->save();
         $user->missings()->save($missing);
 
         return Flash::success('El registro se creó correctamente!');
+    }
+
+    /**
+     * Get missing person by id
+     *
+     * @param $id
+     * @return mixed
+     */
+    public function getMissing($id)
+    {
+        return Missing::findOrFail($id);
+    }
+
+    /**
+     * Update missing person
+     *
+     * @param $request
+     * @param $id
+     * @return mixed
+     */
+    public function updateMissing($request, $id)
+    {
+        $missing = Missing::findOrFail($id);
+
+        $fileName = $this->setNamePhoto($request->photo);
+
+        $missing->fill($request->all());
+        $missing->photo  = $fileName;
+
+        $findUser = User::where('email', '=', $request->email)->first();
+
+        if($findUser) {
+            $user = $findUser;
+        } else {
+            $user = new User();
+            $user->name      = $request->name;
+            $user->last_name = $request->last_nameR;
+            $user->email     = $request->email;
+            $user->phone     = $request->phone;
+            $user->policy    = $request->policy === "true" ? 1 : 0;
+        }
+
+        $user->save();
+        $user->missings()->save($missing);
+
+        return Flash::success('El registro se actualizó correctamente!');
+    }
+
+    /**
+     * @param $photoRequest
+     * @return string
+     */
+    public function setNamePhoto($photoRequest) {
+
+        if ($photoRequest) {
+            $photo     = $photoRequest;
+            $extension = $photo->getClientOriginalExtension();
+            $fileName  = time() . '-' . rand(100, 10000) . '.' . $extension;
+            Storage::disk('local')->put($fileName, File::get($photo));
+        } else {
+            $fileName = 'avatar.jpg';
+        }
+
+        return $fileName;
     }
 }

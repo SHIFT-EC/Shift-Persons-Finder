@@ -11,7 +11,7 @@
                     @include('errors.list')
                 </div>
             </div>
-            {{ Form::open(['route' => 'create-missing.store', 'method' => 'POST', 'files' => true, 'class' => 'text-left']) }}
+            {{ Form::open(['route' => 'missing.store', 'method' => 'POST', 'files' => true, 'class' => 'text-left']) }}
                 <div class="row">
                     <div class="col-sm-12"><h3>Datos Básicos:</h3></div>
                     <div class="col-sm-12 col-md-6">
@@ -60,7 +60,7 @@
                     <div class="col-sm-12 col-md-6">
                         <div class="form-group">
                             <label for="photo">Foto <span class="span__required">*</span></label>
-                            <input type="file" id="photo" name="photo" value="{{ old('photo') }}" required>
+                            <input type="file" id="photo" name="photo" value="{{ old('photo') }}">
                             <p class="help-block">Proporciona únicamente fotos jpg o png.</p>
                         </div>
                     </div>
