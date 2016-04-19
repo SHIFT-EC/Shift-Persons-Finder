@@ -4,6 +4,7 @@ namespace Spf\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+use Illuminate\Support\Facades\Redirect;
 use Spf\Http\Requests;
 use Spf\Http\Requests\MissingCreateRequest;
 use Spf\Shift\Repositories\MissingRepository;
@@ -52,7 +53,9 @@ class MissingController extends Controller
      */
     public function store(MissingCreateRequest $request)
     {
-        //
+        $this->missingRepository->createMissing($request);
+
+        return redirect()->back();
     }
 
     /**
