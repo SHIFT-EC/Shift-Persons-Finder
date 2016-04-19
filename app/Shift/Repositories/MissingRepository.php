@@ -28,13 +28,17 @@ class MissingRepository extends BaseRepo
     {
         $missing = new Missing();
 
-        $photo = $request->photo;
-        $extension = $photo->getClientOriginalExtension();
-        $fileName = time() . '-'. rand(100, 10000) .'.'.$extension;
-        Storage::disk('public')->put('/uploads/' . $fileName, File::get($photo));
+        if($request->photo) {
+            $photo = $request->photo;
+            $extension = $photo->getClientOriginalExtension();
+            $fileName = time() . '-'. rand(100, 10000) .'.'.$extension;
+            Storage::disk('local')->put($fileName, File::get($photo));
+        } else {
+            $fileName = 'avatar.jpg';
+        }
 
         $missing->fill($request->all());
-        $missing->status = 'Desaparecido';
+        $missing->status = 'desaparecido';
         $missing->photo = $fileName;
 
         $user = new User();
@@ -42,7 +46,7 @@ class MissingRepository extends BaseRepo
         $user->last_name = $request->last_nameR;
         $user->email = $request->email;
         $user->phone = $request->phone;
-        $user->policy = $request->policy ? 1 : 0;
+        $user->policy = $request->policy === "true" ? 1 : 0;
 
         $user->save();
         $user->missings()->save($missing);
