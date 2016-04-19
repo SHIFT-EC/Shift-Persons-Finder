@@ -7,21 +7,15 @@
 -----------------------------------------------------------------*/
 
 .btn{
-	background:$base-color;
 	color: #fff;
 	cursor: pointer;
 	border: none;
 	transition: all .3s ease;
 
-	&:hover{
-		background:darken($base-color,5);
-		color: #fff;
+
+	&-primary{
+		background: $base-color;
 	}
 
-	&:focus{
-		background:$base-color;
-		color: #fff;
-	}
-	
-}
+}//FIN BUTTON
 
