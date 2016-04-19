@@ -10,26 +10,26 @@
                     <div class="col-sm-12"><h3>Datos Básicos:</h3></div>
                     <div class="col-sm-12 col-md-6">
                         <div class="form-group">
-                            <label for="first_name">Nombre</label>
-                            <input type="text" class="form-control" name="first_name" id="first_name">
+                            <label for="first_name">Nombre <span class="span__required">*</span></label>
+                            <input type="text" class="form-control" name="first_name" id="first_name" required>
                         </div>
                     </div>
                     <div class="col-sm-12 col-md-6">
                         <div class="form-group">
-                            <label for="last_name">Apellido</label>
-                            <input type="text" class="form-control" name="last_name" id="last_name">
+                            <label for="last_name">Apellido <span class="span__required">*</span></label>
+                            <input type="text" class="form-control" name="last_name" id="last_name" required>
                         </div>
                     </div>
                     <div class="col-sm-12 col-md-6">
                         <div class="form-group">
-                            <label for="age">Edad</label>
-                            <input type="text" class="form-control" name="age" id="age">
+                            <label for="age">Edad <span class="span__required">*</span></label>
+                            <input type="text" class="form-control" name="age" id="age" required>
                         </div>
                     </div>
                     <div class="col-sm-12 col-md-6">
                         <div class="form-group">
-                            <label for="gender">Género</label>
-                            <select class="form-control" name="gender" id="gender">
+                            <label for="gender">Género <span class="span__required">*</span></label>
+                            <select class="form-control" name="gender" id="gender" required>
                                 <option value="">-- Seleccione --</option>
                                 <option value="Mesculino">Masculino</option>
                                 <option value="Femenino">Femenino</option>
@@ -38,14 +38,14 @@
                     </div>
                     <div class="col-sm-12 col-md-6">
                         <div class="form-group">
-                            <label for="address">Lugar Origen</label>
-                            <input type="text" class="form-control" name="address" id="address" placeholder="Ej: Pedernales">
+                            <label for="address">Ciudad Origen <span class="span__required">*</span></label>
+                            <input type="text" class="form-control" name="address" id="address" placeholder="Ej: Pedernales" required>
                         </div>
                     </div>
                     <div class="col-sm-12 col-md-6">
                         <div class="form-group">
-                            <label for="last_location">Útimo lugar conocido</label>
-                            <input type="text" class="form-control" name="last_location" id="last_location" placeholder="Ej: Portoviejo">
+                            <label for="last_location">Útimo lugar conocido <span class="span__required">*</span></label>
+                            <input type="text" class="form-control" name="last_location" id="last_location" placeholder="Ej: Portoviejo" required>
                         </div>
                     </div>
                 </div>
@@ -53,15 +53,15 @@
                 <div class="row">
                     <div class="col-sm-12 col-md-6">
                         <div class="form-group">
-                            <label for="photo">Foto</label>
-                            <input type="file" id="photo" name="photo">
+                            <label for="photo">Foto <span class="span__required">*</span></label>
+                            <input type="file" id="photo" name="photo" required>
                             <p class="help-block">Proporciona únicamente fotos jpg o png.</p>
                         </div>
                     </div>
                     <div class="col-sm-12 col-md-6">
                         <div class="form-group">
-                            <label for="gender">Descripción</label>
-                            <textarea id="gender" class="form-control" name="gender" rows="5"></textarea>
+                            <label for="description">Descripción <span class="span__required">*</span></label>
+                            <textarea id="description" class="form-control" name="description" rows="5" required></textarea>
                         </div>
                     </div>
                 </div>
@@ -70,26 +70,26 @@
                     <div class="col-sm-12"><h3>Datos del creador del registro:</h3></div>
                     <div class="col-sm-12 col-md-6">
                         <div class="form-group">
-                            <label for="name">Tu nombre</label>
-                            <input type="text" class="form-control" name="name" id="name">
+                            <label for="name">Tu nombre <span class="span__required">*</span></label>
+                            <input type="text" class="form-control" name="name" id="name" required>
                         </div>
                     </div>
                     <div class="col-sm-12 col-md-6">
                         <div class="form-group">
-                            <label for="last_nameR">Tu apellido</label>
-                            <input type="text" class="form-control" name="last_nameR" id="last_nameR">
+                            <label for="last_nameR">Tu apellido <span class="span__required">*</span></label>
+                            <input type="text" class="form-control" name="last_nameR" id="last_nameR" required>
                         </div>
                     </div>
                     <div class="col-sm-12 col-md-6">
                         <div class="form-group">
-                            <label for="email">Tu email</label>
-                            <input type="text" class="form-control" name="email" id="email">
+                            <label for="email">Tu email <span class="span__required">*</span></label>
+                            <input type="text" class="form-control" name="email" id="email" required>
                         </div>
                     </div>
                     <div class="col-sm-12 col-md-6">
                         <div class="form-group">
-                            <label for="phone">Tu teléfono</label>
-                            <input type="text" class="form-control" name="phone" id="phone">
+                            <label for="phone">Tu teléfono <span class="span__required">*</span></label>
+                            <input type="text" class="form-control" name="phone" id="phone" required>
                         </div>
                     </div>
                     <div class="col-sm-12 col-md-6">

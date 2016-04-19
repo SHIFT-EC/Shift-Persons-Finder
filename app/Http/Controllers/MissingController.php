@@ -5,9 +5,25 @@ namespace Spf\Http\Controllers;
 use Illuminate\Http\Request;
 
 use Spf\Http\Requests;
+use Spf\Http\Requests\MissingCreateRequest;
+use Spf\Shift\Repositories\MissingRepository;
 
 class MissingController extends Controller
 {
+    /**
+     * @var MissingRepository
+     */
+    private $missingRepository;
+
+    /**
+     * MissingController constructor.
+     * @param MissingRepository $missingRepository
+     */
+    public function __construct(MissingRepository $missingRepository)
+    {
+        $this->missingRepository = $missingRepository;
+    }
+
     /**
      * Display a listing of the resource.
      *
@@ -31,10 +47,10 @@ class MissingController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param Request|MissingCreateRequest $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(MissingCreateRequest $request)
     {
         //
     }
