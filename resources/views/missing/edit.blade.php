@@ -23,19 +23,6 @@
             </div>
             <div class="row">
                 <div class="col-sm-12 col-md-6 col-md-offset-3">
-                    <h5><i>Descripción:</i></h5>
-                    <p>{{ $missing->description }}</p>
-                </div>
-                <div class="col-sm-12 col-md-3 col-md-offset-3">
-                    <p>Registro creado por: <b>{{ $missing->user->name }}</b></p>
-                </div>
-                <div class="col-sm-12 col-md-3">
-                    <p>Teléfono: <a href="tel:{{$missing->user->phone}}"> <span class="label label-success">{{ $missing->user->phone }}</span></a></p>
-                </div>
-                <div class="col-sm-12 col-md-3 col-md-offset-3">
-                    <p>Mail: <a href="mailto:{{$missing->user->email}}"> <span class="label label-success">{{ $missing->user->email }}</span></a></p>
-                </div>
-                <div class="col-sm-12 col-md-3">
                     <p>Estatus actual:
                         @if($missing->status == 'desaparecido')
                             <span class="label label-warning">{{ $missing->status }}</span>
@@ -45,6 +32,24 @@
                             <span class="label label-danger">{{ $missing->status }}</span>
                         @endif
                     </p>
+                    <h5><i>Descripción:</i></h5>
+                    <p>{{ $missing->description }}</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12 col-md-6 col-md-offset-3">
+                    <hr>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12 col-md-3 col-md-offset-3">
+                    <p>Registro creado por: <b>{{ $missing->user->name }}</b></p>
+                </div>
+                <div class="col-sm-12 col-md-3">
+                    <p>Teléfono: <a href="tel:{{$missing->user->phone}}"> <span class="label label-success">{{ $missing->user->phone }}</span></a></p>
+                </div>
+                <div class="col-sm-12 col-md-3 col-md-offset-3">
+                    <p>Mail: <a href="mailto:{{$missing->user->email}}"> <span class="label label-success">{{ $missing->user->email }}</span></a></p>
                 </div>
             </div>
             {{ Form::model($missing, ['route' => ['missing.update', $missing->id], 'method' => 'PUT', 'files' => true, 'class' => 'text-left']) }}
