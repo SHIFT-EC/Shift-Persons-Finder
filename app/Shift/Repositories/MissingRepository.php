@@ -108,6 +108,6 @@ class MissingRepository extends BaseRepo
             $fileName = 'avatar.jpg';
         }
 
-        return $fileName;
+        return 'uploads/'. $fileName;
     }
 }

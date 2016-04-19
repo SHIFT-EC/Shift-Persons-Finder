@@ -39,7 +39,7 @@
             <div class="container-persons">
                 @foreach( $users as $user)
                     <div class="person">
-                        <img class="person__photo" src="{{asset('uploads/'.$user->photo)}}" alt="{{$user->name}}">
+                        <img class="person__photo" src="{{asset($user->photo)}}" alt="{{$user->name}}">
                         <ul class="person__data">
                             <li>Nombre: {{$user->first_name}}</li>
                             <li>Apellido: {{$user->last_name}}</li>

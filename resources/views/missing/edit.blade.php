@@ -13,7 +13,7 @@
             </div>
             <div class="row">
                 <div class="col-sm-12 text-center">
-                    <img src="{{ asset('uploads/'. $missing->photo) }}" alt="{{ $missing->first_name }}" class="img__missing">
+                    <img src="{{ asset($missing->photo) }}" alt="{{ $missing->first_name }}" class="img__missing">
                 </div>
             </div>
             <div class="row">

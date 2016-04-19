@@ -30,7 +30,7 @@ $factory->define(Spf\Shift\Entities\Missing::class, function (Faker\Generator $f
         'second_last_name'  => $faker->lastName,
         'age'               => $faker->numberBetween(1, 85),
         'gender'            => $faker->randomElement([ 'masculino', 'femenino' ]),
-        'photo'             => 'avatar.jpg',
+        'photo'             => '/uploads/avatar.jpg',
         'description'       => $faker->paragraph(1),
         'message_user'      => $faker->paragraph(1),
         'status'            => $faker->randomElement([ 'fallecido', 'desaparecido', 'vivo' ]),
