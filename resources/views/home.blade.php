@@ -39,7 +39,7 @@
             <div class="container-persons">
                 @foreach( $users as $user)
                     <div class="person">
-                        <img class="person__photo" src="{{$user->photo}}" alt="{{$user->name}}">
+                        <img class="person__photo" src="{{asset('uploads/'.$user->photo)}}" alt="{{$user->name}}">
                         <ul class="person__data">
                             <li>Nombre: {{$user->first_name}}</li>
                             <li>Apellido: {{$user->last_name}}</li>
@@ -61,7 +61,7 @@
                                 @endif
                             </li>
                         </ul>
-                        <a href="#" class="btn btn-primary person__button">
+                        <a href="{{ route('missing.edit', $user->id) }}" class="btn btn-primary person__button">
                             <i class="glyphicon glyphicon-eye-open"></i> Ver
                         </a>
                     </div>
