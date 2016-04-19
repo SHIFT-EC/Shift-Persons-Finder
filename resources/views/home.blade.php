@@ -1,6 +1,6 @@
 @extends('layout.template')
 
-@section('title','home')
+@section('title','Emargencias Ecuador')
 
 @section('content')
     <h2 class="title-persons">Últimas personas agregadas</h2>

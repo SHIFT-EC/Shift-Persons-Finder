@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@yield('title', 'Home')</title>
     <meta name="description" content="Emergencias ecuador">
-    <meta name="author" content="Shift">
-    <link rel="shortcut icon" href="favicon.ico">
+    <meta name="author" content="Shift Latam">
+    <link rel="shortcut icon" href="{{ asset('images/favicon.png') }}">
 
     {{-- CSS--}}
     <link rel="stylesheet" href="{{ asset('css/app.min.css') }}">
