@@ -60,7 +60,7 @@ jQuery(document).ready(function($){
 
         theme: "bootstrap",
 
-        requestDelay: 500,
+        requestDelay: 200,
 
     };
     $("#user").easyAutocomplete(options);
