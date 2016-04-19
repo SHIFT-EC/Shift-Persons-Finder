@@ -249,9 +249,10 @@
   z-index: 2;
 }
 .easy-autocomplete-container ul {
+  text-align: left;
   background: none repeat scroll 0 0 #ffffff;
   display: none;
-  margin-top:35px;
+  margin-top:45px;
   padding-bottom: 0;
   padding-left: 0;
   position: relative;
@@ -273,7 +274,8 @@
   border-width: 0 1px 1px;
 }
 .easy-autocomplete-container ul li.selected {
-  background: none repeat scroll 0 0 #ebebeb;
+  background: none repeat scroll 0 0 $success;
+  color: $white;
   cursor: pointer;
 }
 .easy-autocomplete-container ul li.selected div {
@@ -299,7 +301,7 @@
 }
 
 .eac-icon-left .eac-item img {
-  margin-right: 4px;
+  margin-right: 1rem;
   max-height: 30px;
 }
 

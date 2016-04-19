@@ -15,11 +15,19 @@ class HomeController extends Controller
 
     public  function search()
     {
-        $term = \Request::get('term');
 
-        $persons = Missing::where('first_name','LIKE', "%$term%")->get();
+        if (\Request::ajax())
+        {
+            $term = \Request::get('term');
 
-        return $persons;
+            $persons = Missing::where('first_name','LIKE', "%$term%")
+                              ->orWhere('last_name','LIKE', "%$term%")->get();
+
+            return $persons;
+
+        }else{
+            abort('404');
+        }
 
     }
 
