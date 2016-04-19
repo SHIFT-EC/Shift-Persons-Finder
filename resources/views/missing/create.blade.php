@@ -11,7 +11,7 @@
                     @include('errors.list')
                 </div>
             </div>
-            {{ Form::open(['route' => 'create-missing.store', 'method' => 'POST', 'files' => true, 'class' => 'text-left']) }}
+            {{ Form::open(['route' => 'missing.store', 'method' => 'POST', 'files' => true, 'class' => 'text-left']) }}
                 <div class="row">
                     <div class="col-sm-12"><h3>Datos Básicos:</h3></div>
                     <div class="col-sm-12 col-md-6">

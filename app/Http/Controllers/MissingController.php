@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Redirect;
 use Spf\Http\Requests;
 use Spf\Http\Requests\MissingCreateRequest;
+use Spf\Http\Requests\MissingUpdateRequest;
 use Spf\Shift\Repositories\MissingRepository;
 
 class MissingController extends Controller
@@ -77,19 +78,23 @@ class MissingController extends Controller
      */
     public function edit($id)
     {
-        //
+        $missing = $this->missingRepository->getMissing($id);
+
+        return view('missing.edit', compact('missing'));
     }
 
     /**
      * Update the specified resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
+     * @param Request|MissingUpdateRequest $request
+     * @param  int $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(MissingUpdateRequest $request, $id)
     {
-        //
+        $this->missingRepository->updateMissing($request, $id);
+
+        return redirect()->back();
     }
 
     /**

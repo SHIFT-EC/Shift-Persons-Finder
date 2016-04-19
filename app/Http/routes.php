@@ -20,10 +20,18 @@ Route::get('/', [
  * Add register
  */
 Route::get('crear', [
-    'as' => 'create-missing',
+    'as' => 'missing.create',
     'uses' => 'MissingController@create',
 ]);
 Route::post('crear', [
-    'as' => 'create-missing.store',
+    'as' => 'missing.store',
     'uses' => 'MissingController@store',
+]);
+Route::get('desaparecidos/{missing}/edit', [
+    'as' => 'missing.edit',
+    'uses' => 'MissingController@edit',
+]);
+Route::put('desaparecidos/{missing}', [
+    'as' => 'missing.update',
+    'uses' => 'MissingController@update',
 ]);
