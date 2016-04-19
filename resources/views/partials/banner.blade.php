@@ -1,11 +1,11 @@
 
 <div class="banner">
-    {!! Form::open(['route'=>'autocomplete','method' => 'GET','class'=>'form']) !!}
+    {!! Form::open(['route'=>'search','method' => 'GET','class'=>'form']) !!}
         <h2 class="form__title">Buscar a:</h2>
         <div class="form-group">
             <div class="input-group">
-                {!! Form::text('search_user','',['class'=>'form-control','placeholder'=>'Nombre de la persona que buscas','id' => 'search_user']) !!}
-
+                {!! Form::text('user',null,['class'=>'form-control','placeholder'=>'Nombre de la persona que buscas','id' => 'user']) !!}
+                <input type="hidden" id="user_id" name="user_id">
                 <div class="input-group-addon"><i class="glyphicon glyphicon-search"></i></div>
             </div>
         </div>

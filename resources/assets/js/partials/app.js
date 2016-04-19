@@ -1,20 +1,49 @@
-
 jQuery(document).ready(function($){
 
     var options = {
 
         url: "/search",
 
+        getValue: function(element) {
+            return element.first_name + " "+ element.last_name;
+        },
+
         list: {
+            maxNumberOfElements: 10,
+
             match: {
                 enabled: true
+            },
+
+            showAnimation: {
+                type: "fade", //normal|slide|fade
+                time: 400,
+                callback: function() {}
+            },
+
+            hideAnimation: {
+                type: "slide", //normal|slide|fade
+                time: 400,
+                callback: function() {}
+            },
+
+            onSelectItemEvent: function() {
+                var user = $("#user").getSelectedItemData();
+                $('#user_id').val(user.id);
+            },
+
+            onClickEvent: function () {
+                var user = $("#user").getSelectedItemData();
+                window.location.href = '/desaparecidos/' + user.id + '/edit';
             }
         },
 
-        theme: "bootstrap",
+        template: {
+            type: "iconLeft",
+            fields: {
+                iconSrc: "photo"
+            }
 
-        getValue: function(element) {
-            return element.name;
         },
 
         ajaxSettings: {
@@ -25,13 +54,18 @@ jQuery(document).ready(function($){
         },
 
         preparePostData: function(data) {
-            data.phrase = $("#search_user").val();
+            data.term = $("#user").val();
             return data;
         },
 
-        requestDelay: 500
-    };
+        theme: "bootstrap",
 
-    $("#search_user").easyAutocomplete(options);
-	
+        requestDelay: 500,
+
+    };
+    $("#user").easyAutocomplete(options);
+
+
 });
+
+

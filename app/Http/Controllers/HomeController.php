@@ -15,9 +15,11 @@ class HomeController extends Controller
 
     public  function search()
     {
-        $term = \Request::get('phrase');
+        $term = \Request::get('term');
 
-        dd($term);
+        $persons = Missing::where('first_name','LIKE', "%$term%")->get();
+
+        return $persons;
 
     }
 

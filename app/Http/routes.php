@@ -17,7 +17,7 @@ Route::get('/', [
 ]);
 
 Route::get('/search', [
-    'as' => 'autocomplete',
+    'as' => 'search',
     'uses'=>'HomeController@search'
 ]);
 

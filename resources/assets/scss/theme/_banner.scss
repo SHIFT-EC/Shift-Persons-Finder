@@ -11,11 +11,11 @@
 
   .form{
     max-width: $max-width;
-    overflow: hidden;
     padding:12rem 0;
     width: 95%;
     margin: auto;
     text-align: center;
+    z-index:100;
 
     @media screen and (min-width: $desktop){
       padding:14rem 0;
