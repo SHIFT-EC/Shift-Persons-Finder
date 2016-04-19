@@ -48,7 +48,9 @@
       width:23%;
     }
 
-
+      span {
+        text-transform: capitalize;
+      }
       &__photo{
         border-radius: $radius;
         margin-bottom:1rem;

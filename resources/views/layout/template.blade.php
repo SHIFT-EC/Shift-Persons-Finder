@@ -27,14 +27,14 @@
                 <img src="{{ asset('images/logo.png') }}" width="250" alt="Emergencia Ecuador">
             </a>
 
-            <a class=header__ecu href="http://www.ecu911.gob.ec/">
+            <a class=header__ecu href="http://www.ecu911.gob.ec/" target="_blank">
                 <img src="/images/logo_ecu_911.png" alt="Logo 911">
             </a>
 
             {{--<a class="header__home" href="#"><i class="glyphicon glyphicon-home"></i> Inicio</a>--}}
 
             <div class="header__skype">
-                <a href="http://sk.ype.ms/8Ecn5H">
+                <a href="https://login.skype.com/login?client_id=578134&redirect_uri=https%3A%2F%2Fweb.skype.com%2F" target="_blank">
                     <img src="/images/logo_skype.png" alt="Skype">
                 </a>
                 <p>

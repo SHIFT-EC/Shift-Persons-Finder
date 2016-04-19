@@ -9,12 +9,13 @@ footer{
 }
 
 .footer{
-	padding:1rem 0;
+	padding:1.5rem 0;
 	text-align: center;
 	position: relative;
 	@media screen and (min-width: $mobile){
 		a:first-child img {
-			margin-right: 2rem;
+			margin-right: 10%;
+			width:150px;
 		}
 	}
 }
