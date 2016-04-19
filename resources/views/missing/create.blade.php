@@ -59,7 +59,7 @@
                 <div class="row">
                     <div class="col-sm-12 col-md-6">
                         <div class="form-group">
-                            <label for="photo">Foto <span class="span__required">*</span></label>
+                            <label for="photo">Foto </label>
                             <input type="file" id="photo" name="photo" value="{{ old('photo') }}">
                             <p class="help-block">Proporciona únicamente fotos jpg o png.</p>
                         </div>

@@ -67,30 +67,28 @@ class MissingRepository extends BaseRepo
      */
     public function updateMissing($request, $id)
     {
-        $missing = Missing::findOrFail($id);
-
-        $fileName = $this->setNamePhoto($request->photo);
-
-        $missing->fill($request->all());
-        $missing->photo  = $fileName;
-
         $findUser = User::where('email', '=', $request->email)->first();
+        
 
         if($findUser) {
+            $missing = Missing::findOrFail($id);
+
+            $fileName = $this->setNamePhoto($request->photo);
+
+            $missing->fill($request->all());
+            $missing->photo  = $fileName;
+
             $user = $findUser;
+
+            $user->save();
+            $user->missings()->save($missing);
+
+            return Flash::success('El registro se actualizó correctamente!');
         } else {
-            $user = new User();
-            $user->name      = $request->name;
-            $user->last_name = $request->last_nameR;
-            $user->email     = $request->email;
-            $user->phone     = $request->phone;
-            $user->policy    = 1;
+            return Flash::error('El registro no se puedo actualizar ya que tu no eres el creador del registro');
         }
 
-        $user->save();
-        $user->missings()->save($missing);
 
-        return Flash::success('El registro se actualizó correctamente!');
     }
 
     /**
