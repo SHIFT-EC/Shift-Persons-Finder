@@ -14,3 +14,11 @@
 Route::get('/', function () {
     return view('home');
 });
+
+/**
+ * Add register
+ */
+Route::get('crear', [
+    'as' => 'create-missing',
+    'uses' => 'MissingController@create',
+]);
