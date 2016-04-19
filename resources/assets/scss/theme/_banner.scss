@@ -5,14 +5,27 @@
 \*===============================================*/
 
 .banner{
-  background:url("../images/banner_background.jpg");
+  background:url("../images/background_donation.jpg");
   background-size:cover;
   color: $white;
+
+  h2 {
+    font-size: 2rem;
+  }
+  input[type=text] {
+    padding: 22px 10px;
+  }
+  p{
+    font-size: 1.5rem;
+  }
+  .btn {
+    font-size: 1.2rem;
+  }
 
   .form{
     max-width: $max-width;
     padding:12rem 0;
-    width: 95%;
+    width: 98%;
     margin: auto;
     text-align: center;
     z-index:100;

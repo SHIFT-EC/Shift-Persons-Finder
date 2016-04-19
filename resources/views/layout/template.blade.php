@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@yield('title', 'Home')</title>
     <meta name="description" content="Emergencias ecuador">
-    <meta name="author" content="Shift">
-    <link rel="shortcut icon" href="favicon.ico">
+    <meta name="author" content="Shift Latam">
+    <link rel="shortcut icon" href="{{ asset('images/favicon.png') }}">
 
     {{-- CSS--}}
     <link rel="stylesheet" href="{{ asset('css/app.min.css') }}">
@@ -22,6 +22,10 @@
     <header>
 
         <div class="header">
+
+            <a href="{{ route('home') }}" class="header__logo">
+                <img src="{{ asset('images/logo.png') }}" width="250" alt="Emergencia Ecuador">
+            </a>
 
             <a class=header__ecu href="http://www.ecu911.gob.ec/">
                 <img src="/images/logo_ecu_911.png" alt="Logo 911">
@@ -62,7 +66,10 @@
     <footer>
         <div class="footer">
             <a target="_blank" href="http://shiftlatam.com">
-                <img src="/images/logo_shift.png" alt="Logo Shiftlatam">
+                <img src="{{ asset('images/logo_shift.png') }}" alt="Logo Shiftlatam">
+            </a>
+            <a target="_blank" href="http://www.formaciongerencial.com/">
+                <img src="{{ asset('images/logo_formacion.png') }}" alt="Logo formación gerencial">
             </a>
         </div>
     </footer>
