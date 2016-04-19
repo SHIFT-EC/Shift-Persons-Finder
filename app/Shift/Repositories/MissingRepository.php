@@ -13,4 +13,9 @@ class MissingRepository extends BaseRepo
     {
         return new Missing();
     }
+
+    public function createMissing($request)
+    {
+        dd($request->all());
+    }
 }
