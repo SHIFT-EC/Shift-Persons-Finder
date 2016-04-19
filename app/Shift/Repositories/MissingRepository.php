@@ -39,7 +39,7 @@ class MissingRepository extends BaseRepo
         $user->last_name = $request->last_nameR;
         $user->email     = $request->email;
         $user->phone     = $request->phone;
-        $user->policy    = $request->policy === "true" ? 1 : 0;
+        $user->policy    = 1;
 
         $user->save();
         $user->missings()->save($missing);
@@ -84,7 +84,7 @@ class MissingRepository extends BaseRepo
             $user->last_name = $request->last_nameR;
             $user->email     = $request->email;
             $user->phone     = $request->phone;
-            $user->policy    = $request->policy === "true" ? 1 : 0;
+            $user->policy    = 1;
         }
 
         $user->save();

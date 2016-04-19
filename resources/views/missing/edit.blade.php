@@ -81,12 +81,8 @@
                         <input type="text" class="form-control" name="phone" value="{{ old('phone') }}" id="phone" required>
                     </div>
                 </div>
-                <div class="col-sm-12 col-md-6 col-md-offset-3">
-                    <div class="checkbox">
-                        <label>
-                            <input type="checkbox" value="{{ old('policy') }}" name="policy"> Acepto la política
-                        </label>
-                    </div>
+                <div class="col-sm-12 col-md-6 col-md-offset-3" style="margin-bottom: 0.8rem">
+                    <span class="label label-warning">Al enviar este formulario aceptas que estás proporcionando información real</span>
                 </div>
                 <div class="col-sm-12 text-center">
                     <button type="submit" class="btn btn-primary">Actualizar Registro</button>
