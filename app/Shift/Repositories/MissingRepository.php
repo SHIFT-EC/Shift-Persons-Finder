@@ -55,7 +55,7 @@ class MissingRepository extends BaseRepo
      */
     public function getMissing($id)
     {
-        return Missing::findOrFail($id);
+        return Missing::with('user')->findOrFail($id);
     }
 
     /**

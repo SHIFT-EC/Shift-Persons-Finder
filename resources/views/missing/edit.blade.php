@@ -12,13 +12,29 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-sm-12 text-center">
+                <div class="col-sm-12 col-md-6 col-md-offset-3">
                     <img src="{{ asset($missing->photo) }}" alt="{{ $missing->first_name }}" class="img__missing">
                 </div>
             </div>
             <div class="row">
-                <div class="col-sm-12 text-center">
+                <div class="col-sm-12 col-md-6 col-md-offset-3">
                     <h1>{{ $missing->first_name }} {{ $missing->last_name }}</h1>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12 col-md-6 col-md-offset-3">
+                    <h5>Descripción</h5>
+                    <p>{{ $missing->description }}</p>
+                    <p>Registro creado por <b>{{ $missing->user->name }}</b></p>
+                    <p>Estatus actual:
+                        @if($missing->status == 'desaparecido')
+                            <span class="label label-warning">{{ $missing->status }}</span>
+                        @elseif($missing->status == 'vivo')
+                            <span class="label label-success">{{ $missing->status }}</span>
+                        @else
+                            <span class="label label-danger">{{ $missing->status }}</span>
+                        @endif
+                    </p>
                 </div>
             </div>
             {{ Form::model($missing, ['route' => ['missing.update', $missing->id], 'method' => 'PUT', 'files' => true, 'class' => 'text-left']) }}
@@ -26,18 +42,13 @@
                 <div class="col-sm-12 col-md-6 col-md-offset-3">
                     <div class="form-group">
                         <label for="status">Estatus <span class="span__required">*</span></label>
-                        <select class="form-control" name="status" id="status" value="{{ old('status') }}" required>
-                            <option value="">-- Seleccione --</option>
-                            <option value="desaparecido">desaparecido</option>
-                            <option value="fallecido">fallecido</option>
-                            <option value="vivo">vivo</option>
-                        </select>
+                        {{ Form::select('status', array('desaparecido' => 'Desaparecido', 'fallecido' => 'Fallecido', 'vivo' => 'Vivo'), null, ['placeholder' => 'Selecciona el estatus', 'class' => 'form-control', $missing->status != 'desaparecido' ? 'disabled' : '', 'required', 'id' => 'status']) }}
                     </div>
                 </div>
                 <div class="col-sm-12 col-md-6 col-md-offset-3">
                     <div class="form-group">
-                        <label for="last_location">última ubicación? <span class="span__required">*</span></label>
-                        <textarea id="last_location" class="form-control" name="last_location" value="{{ old('last_location') }}" rows="5" required></textarea>
+                        <label for="last_location">Última ubicación? <span class="span__required">*</span></label>
+                        {{ Form::textarea('last_location', null, ['class' => 'form-control', 'id' => 'last_location', 'rows' => "5", 'required']) }}
                     </div>
                 </div>
                 <div class="col-sm-12 col-md-6 col-md-offset-3">
@@ -50,7 +61,7 @@
                 <div class="col-sm-12 col-md-6 col-md-offset-3">
                     <div class="form-group">
                         <label for="message_user">Mensaje adicional <span class="span__required">*</span></label>
-                        <textarea id="message_user" class="form-control" name="message_user" value="{{ old('message_user') }}" rows="5" required></textarea>
+                        {{ Form::textarea('message_user', null, ['class' => 'form-control', 'id' => 'message_user', 'rows' => "5", 'required']) }}
                     </div>
                 </div>
             </div>
@@ -81,7 +92,7 @@
                         <input type="text" class="form-control" name="phone" value="{{ old('phone') }}" id="phone" required>
                     </div>
                 </div>
-                <div class="col-sm-12 col-md-6 col-md-offset-3" style="margin-bottom: 0.8rem">
+                <div class="col-sm-12 col-md-6 col-md-offset-3 text-center" style="margin-bottom: 0.8rem">
                     <span class="label label-warning">Al enviar este formulario aceptas que estás proporcionando información real</span>
                 </div>
                 <div class="col-sm-12 text-center">
