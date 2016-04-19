@@ -34,12 +34,19 @@ class MissingRepository extends BaseRepo
         $missing->status = 'desaparecido';
         $missing->photo  = $fileName;
 
-        $user            = new User();
-        $user->name      = $request->name;
-        $user->last_name = $request->last_nameR;
-        $user->email     = $request->email;
-        $user->phone     = $request->phone;
-        $user->policy    = 1;
+        $findUser = User::where('email', '=', $request->email)->first();
+
+        if($findUser) {
+            $user = $findUser;
+        } else {
+            $user            = new User();
+            $user->name      = $request->name;
+            $user->last_name = $request->last_nameR;
+            $user->email     = $request->email;
+            $user->phone     = $request->phone;
+            $user->policy    = 1;
+        }
+
 
         $user->save();
         $user->missings()->save($missing);
@@ -68,7 +75,6 @@ class MissingRepository extends BaseRepo
     public function updateMissing($request, $id)
     {
         $findUser = User::where('email', '=', $request->email)->first();
-        
 
         if($findUser) {
             $missing = Missing::findOrFail($id);
