@@ -16,6 +16,11 @@ Route::get('/', [
     'uses' => 'HomeController@index'
 ]);
 
+Route::get('/search', [
+    'as' => 'autocomplete',
+    'uses'=>'HomeController@search'
+]);
+
 /**
  * Add register
  */
