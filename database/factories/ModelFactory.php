@@ -13,9 +13,30 @@
 
 $factory->define(Spf\User::class, function (Faker\Generator $faker) {
     return [
-        'name' => $faker->name,
-        'email' => $faker->safeEmail,
-        'password' => bcrypt(str_random(10)),
-        'remember_token' => str_random(10),
+        'name'      => $faker->name,
+        'last_name' => $faker->lastName,
+        'email'     => $faker->safeEmail,
+        'phone'     => $faker->phoneNumber,
+        'policy'    => $faker->randomElement([ 1, 0 ])
+    ];
+});
+
+$factory->define(Spf\Shift\Entities\Missing::class, function (Faker\Generator $faker) {
+    return [
+
+        'first_name'        => $faker->firstName,
+        'second_first_name' => $faker->lastName,
+        'last_name'         => $faker->firstName,
+        'second_last_name'  => $faker->lastName,
+        'age'               => $faker->numberBetween(1, 85),
+        'gender'            => $faker->randomElement([ 'masculino', 'femenino' ]),
+        'photo'             => $faker->imageUrl('150', '150', 'people', true),
+        'description'       => $faker->paragraph(1),
+        'message_user'      => $faker->paragraph(1),
+        'status'            => $faker->randomElement([ 'fallecido', 'desaparecido', 'vivo' ]),
+        'address'           => $faker->address,
+        'last_location'     => $faker->address,
+        'user_id'           => $faker->numberBetween(1, 200)
+
     ];
 });

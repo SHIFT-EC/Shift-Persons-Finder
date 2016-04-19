@@ -1,8 +1,9 @@
 <?php
 
 use Illuminate\Database\Seeder;
+use Spf\Shift\Entities\Missing;
 
-class DatabaseSeeder extends Seeder
+class MissingTableSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -11,7 +12,6 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        $this->call(UsersTableSeeder::class);
-        $this->call(MissingTableSeeder::class);
+       factory(Missing::class, 200)->create();
     }
 }
