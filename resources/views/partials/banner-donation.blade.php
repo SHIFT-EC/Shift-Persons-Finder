@@ -1,13 +1,41 @@
 
 
 <div class="banner-donation">
-    <h2 class="banner-donation__title">Infórmate donde puedes hacer tus donaciones</h2>
+    <div class="container">
+        <h2 class="banner-donation__title">Infórmate donde puedes hacer tus donaciones</h2>
 
-    <!-- Button trigger modal -->
-    <button type="button" class="btn btn-success" data-toggle="modal" data-target="#myModal2">
-        <i class="glyphicon glyphicon-eye-open"></i>
-        Ver
-    </button>
+        <!-- Button trigger modal -->
+        <div class="row">
+            <div class="col-sm-12">
+                <button type="button" class="btn btn-success" data-toggle="modal" data-target="#myModal2">
+                    <i class="glyphicon glyphicon-eye-open"></i>
+                    Ver Información
+                </button>
+            </div>
+        </div>
+        <div class="row">
+
+            <div class="col-sm-12 col-md-4 text-center">
+                <a href="http://www.consuladovirtual.gob.ec/" target="_blank" class="btn btn-info">
+                    <i class="glyphicon glyphicon-eye-open"></i>
+                    Consulado virtual
+                </a>
+            </div>
+            <div class="col-sm-12 col-md-4 text-center">
+                <a href="http://donaundiadetrabajo.com/" target="_blank" class="btn btn-info">
+                    <i class="glyphicon glyphicon-eye-open"></i>
+                    Dona un día de trabajo
+                </a>
+            </div>
+            <div class="col-sm-12 col-md-4 text-center">
+                <a href="http://donaciones.misiva.com.ec/" target="_blank" class="btn btn-info">
+                    <i class="glyphicon glyphicon-eye-open"></i>
+                    Puntos de donaciones
+                </a>
+            </div>
+        </div>
+    </div>
+
 
     <!-- Modal -->
     <div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
