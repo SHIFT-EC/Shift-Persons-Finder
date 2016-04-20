@@ -56,7 +56,7 @@
 
                             <h4 class="text-center"><strong class="label label-info">911</strong></h4>
                             <h4 class="text-center"><strong class="label label-info">1800 apoya</strong></h4>
-                            <h4 class="text-center"><strong class="label label-info">Cruz roja:  022582452 ext. 317</strong></h4>
+                            <h4 class="text-center"><strong class="label label-info">Cruz Roja:  022582452 ext. 317</strong></h4>
 
                         </div>
                         <div class="modal-footer">

@@ -47,9 +47,8 @@
                 </div>
                 <div class="modal-body text-justify">
                     <p>
-                        El gobierno central, a través del MIES, ha habilitado los “Puntos de Solidaridad”,
-                        ubicados en todas las oficinas de las Direcciones Distritales MIES y Coordinaciones
-                        Zonales MIES, que trabajarán desde este domingo desde las 08:00 hasta las 17:00.
+                        Este domingo 23 de abril desde las 8:00 hasta  las 17:00, el gobierno central, a través del MIES,
+                        ha habilitado los “Puntos de Solidaridad”, ubicados en todas las oficinas de las Direcciones Distritales MIES y Coordinaciones Zonales MIES.
                     </p>
 
                     <h4><strong>Recepción de donaciones</strong></h4>
