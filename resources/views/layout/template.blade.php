@@ -33,7 +33,7 @@
         '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
         })(window,document,'script','dataLayer','GTM-KPQTQV');</script>
     <!-- End Google Tag Manager -->
-
+    
     @include('partials.networks')
 
     {{-- =======================
@@ -121,6 +121,5 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
     <script src="{{ asset('js/app.min.js') }}"></script>
     @yield('scripts')
-
 </body>
 </html>
