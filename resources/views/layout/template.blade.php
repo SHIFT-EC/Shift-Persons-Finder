@@ -8,13 +8,24 @@
     <meta name="author" content="Shift Latam">
     <link rel="shortcut icon" href="{{ asset('images/favicon.png') }}">
 
+    <meta content='Emergencias Ecuador' property='og:site_name'/>
+    <meta content='Shiflatam' property='og:author'/>
+    <meta content='Plataforma para poder encontrar a personas desaparecidas por el terremoto de Ecuador' property='og:description'/>
+    <meta content='https://emergenciaecuador.com/images/portada_facebook.jpg' property='og:image'/>
+
     {{-- CSS--}}
     <link rel="stylesheet" href="{{ asset('css/app.min.css') }}">
 
     {{-- FONTS --}}
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,400italic,600italic' rel='stylesheet' type='text/css'>
+
+    {{--ICONS--}}
+    <link href="https://file.myfontastic.com/rR5TjJ6V9aDs6jE3PxLZJZ/icons.css" rel="stylesheet">
+
 </head>
 <body>
+
+    @include('partials.networks')
 
     {{-- =======================
          HEADER
@@ -27,11 +38,34 @@
                 <img src="{{ asset('images/logo.png') }}" width="250" alt="Emergencia Ecuador">
             </a>
 
-            <a class=header__ecu href="http://www.ecu911.gob.ec/" target="_blank">
-                <img src="/images/logo_ecu_911.png" alt="Logo 911">
-            </a>
+            <!-- Button trigger modal -->
+            <button type="button" class="btn btn-primary header__phones" data-toggle="modal" data-target="#myModal">
+                <i class="glyphicon glyphicon-phone"></i>
+                Números de Emergencia
+            </button>
 
-            {{--<a class="header__home" href="#"><i class="glyphicon glyphicon-home"></i> Inicio</a>--}}
+            <!-- Modal -->
+            <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                            <h4 class="modal-title" id="myModalLabel"><strong>Números de emergencia</strong></h4>
+                        </div>
+                        <div class="modal-body text-justify">
+
+                            <h4 class="text-center"><strong class="label label-info">911</strong></h4>
+                            <h4 class="text-center"><strong class="label label-info">1800 apoya</strong></h4>
+                            <h4 class="text-center"><strong class="label label-info">Cruz roja:  022582452 ext. 317</strong></h4>
+
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-primary" data-dismiss="modal">Cerrar</button>
+                        </div>
+                    </div>
+                </div>
+            </div> <!-- Fin Modal -->
+
 
             <div class="header__skype">
                 <a href="https://login.skype.com/login?client_id=578134&redirect_uri=https%3A%2F%2Fweb.skype.com%2F" target="_blank">

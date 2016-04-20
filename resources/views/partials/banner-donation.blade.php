@@ -4,13 +4,13 @@
     <h2 class="banner-donation__title">Infórmate donde puedes hacer tus donaciones</h2>
 
     <!-- Button trigger modal -->
-    <button type="button" class="btn btn-success" data-toggle="modal" data-target="#myModal">
+    <button type="button" class="btn btn-success" data-toggle="modal" data-target="#myModal2">
         <i class="glyphicon glyphicon-eye-open"></i>
         Ver
     </button>
 
     <!-- Modal -->
-    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
@@ -111,7 +111,7 @@
 
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+                    <button type="button" class="btn btn-primary" data-dismiss="modal">Cerrar</button>
                 </div>
             </div>
         </div>

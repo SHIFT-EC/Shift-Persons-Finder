@@ -85,6 +85,11 @@
                         {{ Form::email('email', null, ['class' => 'form-control', 'id' => 'email']) }}
                     </div>
                 </div>
+
+                <div class="col-sm-12 text-center">
+                    <button type="submit" class="btn btn-primary"><i class="glyphicon glyphicon-floppy-disk"></i> Actualizar Registro</button>
+                </div>
+
             </div>
             <hr>
             <div class="row">
@@ -116,9 +121,6 @@
                 <!--<div class="col-sm-12 col-md-6 col-md-offset-3 text-center" style="margin-bottom: 0.8rem; margin-top: 0.8rem">
                     <span class="label label-warning">Al enviar este formulario aceptas que estás proporcionando información real</span>
                 </div>-->
-                <div class="col-sm-12 text-center">
-                    <button type="submit" class="btn btn-primary">Actualizar Registro</button>
-                </div>
             </div>
             {{ Form::close() }}
         </div>

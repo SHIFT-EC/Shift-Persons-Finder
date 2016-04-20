@@ -1,0 +1,49 @@
+
+
+/*===============================================*\
+    NETWORKS
+\*===============================================*/
+
+.networks{
+  position: fixed;
+  top:50%;
+  right:0;
+  transform: translateY(-50%);
+  z-index: 200;
+
+  a{
+    color: $white;
+    display: block;
+    padding:.75rem;
+    margin-bottom:.5rem;
+    border-radius: $radius 0 0 $radius;
+    position: relative;
+    right: -85px;
+    transition: all .3s ease;
+
+    &:hover{
+      text-decoration: none;
+      transition: all .3s ease;
+      cursor: pointer;
+      right: 0;
+    }
+
+    &:before{
+      font-size:1.5rem;
+      position: relative;
+      top:6px;
+      line-height: 0;
+      padding-right:.5rem;
+    }
+
+  }//FIN A
+
+  .icon-facebook-square{
+        background: #4862A3;
+  }
+
+  .icon-twitter-square{
+    background: #55ACEE;
+  }
+
+}//FIN NETWORKS
