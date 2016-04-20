@@ -4,6 +4,7 @@ namespace Spf\Shift\Repositories;
 
 use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\Storage;
+use Intervention\Image\Facades\Image;
 use Laracasts\Flash\Flash;
 use Spf\Shift\Entities\Missing;
 use Spf\User;
@@ -105,9 +106,13 @@ class MissingRepository extends BaseRepo
 
         if ($photoRequest) {
             $photo     = $photoRequest;
+            $path = public_path() . '/uploads';
             $extension = $photo->getClientOriginalExtension();
             $fileName  = time() . '-' . rand(100, 10000) . '.' . $extension;
-            Storage::disk('local')->put($fileName, File::get($photo));
+
+            $photo= Image::make($photo->getRealPath())->resize('150','150')->save($path . '/' . $fileName);
+
+            //Storage::disk('local')->put($fileName, File::get($photo));
         } else {
             $fileName = 'avatar.jpg';
         }
