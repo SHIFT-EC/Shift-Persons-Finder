@@ -15,22 +15,29 @@
         </div>
         <div class="row">
 
-            <div class="col-sm-12 col-md-4 text-center">
+            <div class="col-sm-12 col-md-3 text-center">
                 <a href="http://www.consuladovirtual.gob.ec/" target="_blank" class="btn btn-info">
                     <i class="glyphicon glyphicon-eye-open"></i>
                     Consulado virtual
                 </a>
             </div>
-            <div class="col-sm-12 col-md-4 text-center">
+            <div class="col-sm-12 col-md-3 text-center">
                 <a href="http://donaundiadetrabajo.com/" target="_blank" class="btn btn-info">
                     <i class="glyphicon glyphicon-eye-open"></i>
                     Dona un día de trabajo
                 </a>
             </div>
-            <div class="col-sm-12 col-md-4 text-center">
+            <div class="col-sm-12 col-md-3 text-center">
                 <a href="http://donaciones.misiva.com.ec/" target="_blank" class="btn btn-info">
                     <i class="glyphicon glyphicon-eye-open"></i>
                     Puntos de donaciones
+                </a>
+            </div>
+
+            <div class="col-sm-12 col-md-3 text-center">
+                <a href="http://geolab.como.polimi.it/?page_id=2150" target="_blank" class="btn btn-info">
+                    <i class="glyphicon glyphicon-eye-open"></i>
+                    Actualiza el estado de las vias
                 </a>
             </div>
         </div>
