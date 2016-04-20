@@ -44,7 +44,7 @@
                             <li>Nombre: {{$user->first_name}}</li>
                             <li>Apellido: {{$user->last_name}}</li>
                             <li>Edad: {{$user->age}}</li>
-                            <li>Ciudad: {{$user->city}}</li>
+                            <li>Ciudad: {{$user->address}}</li>
                             <li>Estado:
                                 @if($user->status == 'vivo')
                                     <span class="label label-success">
