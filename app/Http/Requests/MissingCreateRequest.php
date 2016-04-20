@@ -33,7 +33,7 @@ class MissingCreateRequest extends Request
             'name'          => 'required',
             'last_nameR'    => 'required',
             'email'         => 'required|email',
-            'phone'         => 'required|numeric'
+            'phone'         => 'numeric'
         ];
     }
 
@@ -56,7 +56,6 @@ class MissingCreateRequest extends Request
             'last_nameR.required'    => 'Ingresa tu apellido',
             'email.required'         => 'Ingresa un email para poder contactarte',
             'email.email'            => 'Ingresa un email válido',
-            'phone.required'         => 'Ingresa tu número telefónico',
             'phone.numeric'          => 'Tu número de teléfono debe tener únicamente números'
         ];
     }

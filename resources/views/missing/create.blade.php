@@ -94,8 +94,8 @@
                     </div>
                     <div class="col-sm-12 col-md-6">
                         <div class="form-group">
-                            <label for="phone">Tu teléfono <span class="span__required">*</span></label>
-                            <input type="text" class="form-control" name="phone" value="{{ old('phone') }}" id="phone" required>
+                            <label for="phone">Tu teléfono</label>
+                            <input type="text" class="form-control" name="phone" value="{{ old('phone') }}" id="phone">
                         </div>
                     </div>
                     <div class="col-sm-12 text-center" style="margin-bottom: 0.8rem">
